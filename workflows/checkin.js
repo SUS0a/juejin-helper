@@ -321,7 +321,7 @@ async function run(args) {
   let messageList = [];
   let index = 0;
    for (let cookie of cookies) {
-    console.log(`Check Cookies_${index + 1}`); 
+    console.log('Check Cookies_'+ (index+1)); 
     const checkin = new CheckIn(cookie);
 
     await utils.wait(utils.randomRangeNumber(1000, 5000)); // 初始等待1-5s
