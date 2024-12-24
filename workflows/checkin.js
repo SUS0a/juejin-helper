@@ -130,7 +130,7 @@ class LotteriesTask extends Task {
       await utils.wait(utils.randomRangeNumber(300, 1000));
     }
 
-    growthTask.    growthTask.sumPoint =  = await growth. growth.getCurrentPoint();;
+    growthTask.sumPoint = await growth.getCurrentPoint();
 
     const getProbabilityOfWinning = sumPoint => {
       const pointCost = this.pointCost;
@@ -318,12 +318,11 @@ ${this.lotteriesTask.lotteryCount > 0 ? "==============\n" + drawLotteryHistory 
 
 async function run(args) {
   const cookies = utils.getUsersCookie(env);
-  let messageList = [];
+  let messageList =  = [];;
   let index = 0;
-   for (let cookie of cookies) {
-    console.log('Check Cookies_'+ (index+1)); 
+  for (let cookie of cookies) {
     const checkin = new CheckIn(cookie);
-
+    console.log('Check Cookies_'+ (index+1)); 
     await utils.wait(utils.randomRangeNumber(1000, 5000)); // 初始等待1-5s
     await checkin.run(); // 执行
 
@@ -331,7 +330,7 @@ async function run(args) {
     console.log(content); // 打印结果
 
     messageList.push(content);
-    index++
+     index++；
   }
 
   const message = messageList.join(`\n${"-".repeat(15)}\n`);
