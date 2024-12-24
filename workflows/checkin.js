@@ -318,7 +318,7 @@ ${this.lotteriesTask.lotteryCount > 0 ? "==============\n" + drawLotteryHistory 
 
 async function run(args) {
   const cookies = utils.getUsersCookie(env);
-  let messageList =  = [];;
+  let messageList =  = [];
   let index = 0;
   for (let cookie of cookies) {
     const checkin = new CheckIn(cookie);
@@ -330,7 +330,7 @@ async function run(args) {
     console.log(content); // 打印结果
 
     messageList.push(content);
-     index++；
+    index++;
   }
 
   const message = messageList.join(`\n${"-".repeat(15)}\n`);
