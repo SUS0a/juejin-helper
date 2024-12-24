@@ -319,8 +319,9 @@ ${this.lotteriesTask.lotteryCount > 0 ? "==============\n" + drawLotteryHistory 
 async function run(args) {
   const cookies = utils.getUsersCookie(env);
   let messageList = [];
-  for (let cookie of cookies) {
-    const checkin = new CheckIn(cookie);
+   for (let i = 0, length = cookies.length; i < length; i++) {
+    console.log('Check Cookies_'+i);
+    const checkin = new CheckIn(cookies[i]);
 
     await utils.wait(utils.randomRangeNumber(1000, 5000)); // 初始等待1-5s
     await checkin.run(); // 执行
