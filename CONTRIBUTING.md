@@ -19,4 +19,4 @@ module.exports = {
 };
 ```
 - `yarn checkin` 运行掘金签到脚本
-- `yarn seagold` 运行海底掘金游戏脚本
+- `yarn seagold` 运行海底掘金游戏脚本 
